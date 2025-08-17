@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>دکتر مروت‌الله پیشگاهی — متخصص اورولوژی</title>
+  <meta name="description" content="دکتر مروت‌الله پیشگاهی — جراح کلیه و مجاری ادراری (اورولوژی). اطلاعات مطب، نوبت‌دهی، خدمات و تماس">
+  <style>
+    :root{
+      --accent1:#0066cc;
+      --accent2:#00bfa5;
+      --glass: rgba(255,255,255,0.07);
+      --card: rgba(255,255,255,0.06);
+      --text:#e9f0f7;
+      --muted:#c8d6df;
+      font-family: "Vazirmatn", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0; background: linear-gradient(135deg,#071428 0%, #072b40 50%, #00384d 100%); color:var(--text); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+    .container{max-width:1100px;margin:28px auto;padding:28px}
+
+    /* header */
+    header{display:flex;align-items:center;gap:18px;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:84px;height:84px;border-radius:18px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:grid;place-items:center;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+    .logo h1{margin:0;font-size:20px;color:white}
+    .title h2{margin:0;font-size:20px}
+    .title p{margin:2px 0 0;color:var(--muted);font-size:13px}
+
+    nav{display:flex;gap:8px}
+    .btn{background:linear-gradient(90deg,var(--accent2),var(--accent1));border:none;padding:10px 16px;border-radius:10px;color:#02121a;font-weight:700;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,0.45)}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:420px 1fr;gap:24px;margin-top:26px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));padding:22px;border-radius:18px;backdrop-filter: blur(6px);box-shadow:0 10px 30px rgba(2,8,14,0.6)}
+    .profile{display:flex;gap:16px;align-items:center}
+    .avatar{width:140px;height:140px;border-radius:18px;background:linear-gradient(180deg,#ffffff11,#00000015);display:grid;place-items:center;font-size:42px;color:var(--text);font-weight:800}
+    .info h3{margin:0;font-size:22px}
+    .info p{margin:6px 0;color:var(--muted)}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .pill{background:var(--card);padding:6px 10px;border-radius:10px;color:var(--muted);font-size:13px}
+    .rating{font-weight:800;color:gold}
+
+    /* services */
+    .services{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:16px}
+    .service{padding:12px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
+    .service h4{margin:0 0 6px 0}
+    .lead{color:var(--muted)}
+
+    /* right column */
+    .right .big-cta{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .clinic-card{display:flex;gap:12px;align-items:center}
+    .clinic-info{flex:1}
+    .map{height:180px;border-radius:12px;background:linear-gradient(90deg,#022431,#063a46);display:grid;place-items:center;color:var(--muted)}
+
+    /* sections */
+    section{margin-top:20px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .review{background:linear-gradient(180deg, rgba(0,0,0,0.12), rgba(255,255,255,0.02));padding:14px;border-radius:12px}
+
+    footer{margin-top:30px;padding:16px;border-radius:12px;background:transparent;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+
+    /* responsive */
+    @media (max-width:980px){.hero{grid-template-columns:1fr}.grid-3{grid-template-columns:repeat(2,1fr)}.logo{width:64px;height:64px}}
+    @media (max-width:600px){.grid-3{grid-template-columns:1fr}.container{padding:16px}}
+
+    /* subtle entrance animations */
+    .fade-in{opacity:0;transform:translateY(8px);animation:enter 700ms ease forwards}
+    .fade-in.delay{animation-delay:120ms}
+    @keyframes enter{to{opacity:1;transform:none}}
+
+    /* fancy glowing border for hero */
+    .glow{position:relative}
+    .glow:before{content:'';position:absolute;inset:-2px;border-radius:20px;background:linear-gradient(90deg,#00ffd0aa, #00aaff33);filter:blur(18px);opacity:0.18;z-index:-1}
+
+    /* modal */
+    .modal-bg{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5));}
+    .modal{width:420px;padding:18px;border-radius:14px;background:linear-gradient(180deg, #021722, #022733);box-shadow:0 20px 70px rgba(0,0,0,0.7)}
+    .close{background:transparent;border:0;color:var(--muted);font-weight:700;cursor:pointer}
+    input,textarea{width:100%;padding:10px;border-radius:10px;background:#021e25;border:1px solid rgba(255,255,255,0.03);color:var(--text);margin-top:8px}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="fade-in">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"><h1>پ</h1></div>
+        <div class="title">
+          <h2>دکتر مروت‌الله پیشگاهی</h2>
+          <p>متخصص جراحی کلیه و مجاری ادراری — اورولوژیست</p>
+        </div>
+      </div>
+      <nav>
+        <button class="btn" id="bookBtn">نوبت آنلاین</button>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div class="card glow fade-in">
+        <div class="profile">
+          <div class="avatar" aria-hidden="true">م</div>
+          <div class="info">
+            <h3>دکتر مروت‌الله پیشگاهی</h3>
+            <p class="lead">فلوشیپ اوروانکولوژی — ۳۷+ سال تجربه — فوق‌تخصص جراحی‌های کلیه، پیوند، و درمان سرطان‌های دستگاه ادراری</p>
+            <div class="meta">
+              <div class="pill">امتیاز بیماران: <span class="rating">4.8</span> / 5</div>
+              <div class="pill">بیمارستان‌ها: پارسیان، پاسارگاد</div>
+              <div class="pill">شماره نظام: 20780</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="services" style="margin-top:14px">
+          <div class="service">
+            <h4>سنگ کلیه و درمان‌های سنگ‌شکنی</h4>
+            <p class="lead">درمان سنگ‌های کلیه با روش‌های کم‌تهاجمی (ESWL, PCNL) و مشاوره پیشگیری.</p>
+          </div>
+          <div class="service">
+            <h4>سرطان دستگاه ادراری</h4>
+            <p class="lead">فلوشیپ اوروانکولوژی — تشخیص، جراحی و پیگیری بیماران سرطانی.</p>
+          </div>
+          <div class="service">
+            <h4>بزرگی پروستات و LUTS</h4>
+            <p class="lead">تشخیص و درمان جراحی و دارویی اختلالات پروستات.</p>
+          </div>
+          <div class="service">
+            <h4>ناباروری مردان و اختلالات جنسی</h4>
+            <p class="lead">ارزیابی ناباروری مردانه، واریکوسل و درمان‌های مرتبط.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:12px;margin-top:16px;align-items:center">
+          <button class="btn" id="contactBtn">تماس سریع ۰۲۱‑۸۸۷۸۸۷۶۸</button>
+          <button class="btn" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)" id="faqBtn">سوالات متداول</button>
+        </div>
+      </div>
+
+      <aside class="right">
+        <div class="card fade-in delay">
+          <div class="big-cta">
+            <div>
+              <h3 style="margin:0">مطب‌های دکتر</h3>
+              <p class="lead" style="margin:6px 0">ضلع شمال‌شرقی میدان ونک — خیابان شهید صانعی — گروه پزشکی ونک — طبقه دوم</p>
+              <div class="clinic-card" style="margin-top:8px">
+                <div style="width:10px;height:60px;border-radius:8px;background:linear-gradient(180deg,var(--accent2),var(--accent1))"></div>
+                <div class="clinic-info">
+                  <strong>تلفن مطب ونک:</strong> ۰۲۱‑۸۸۷۸۸۷۶۸<br>
+                  <strong>مطب دوم (پیروزی):</strong> ۰۲۱‑۳۳۷۹۱۹۰۵
+                </div>
+              </div>
+            </div>
+            <div style="width:200px">
+              <div class="map">نقشه (قرار گیرد)</div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px">
+            <h4 style="margin:0">نوبت‌دهی و ویزیت</h4>
+            <p class="lead">برای دریافت نوبت، از دکمه "نوبت آنلاین" استفاده کنید یا با شماره‌های مطب تماس بگیرید. همچنین امکان مشاوره تلفنی و آنلاین فراهم است.</p>
+          </div>
+        </div>
+
+        <div class="card fade-in delay" style="margin-top:18px">
+          <h4 style="margin:0">گالری و ویدیوها</h4>
+          <p class="lead">تصاویری از مطب، فرایندهای درمانی (بدون نمایش بیمار) و ویدیوهای آموزشی کوتاه.</p>
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <div style="flex:1;height:86px;border-radius:10px;background:#021f26;display:grid;place-items:center">تصویر ۱</div>
+            <div style="flex:1;height:86px;border-radius:10px;background:#021f26;display:grid;place-items:center">تصویر ۲</div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <section class="card fade-in">
+      <h3 style="margin:0">نظرات بیماران</h3>
+      <div class="grid-3" style="margin-top:12px">
+        <div class="review">
+          <strong>مرضیه — تهران</strong>
+          <p class="lead">"دکتر محترم و دقیق، تشخیص و درمان سنگ کلیه من را با کمترین درد انجام دادند."</p>
+        </div>
+        <div class="review">
+          <strong>سعید — تهران</strong>
+          <p class="lead">"پرسنل مطب مهربان و محیط مرتب؛ تجربه نوبت‌گیری آنلاین روان بود."</p>
+        </div>
+        <div class="review">
+          <strong>فروغ — کرج</strong>
+          <p class="lead">"پیگیری بعد از عمل کامل و مشاوره‌های مفید. ممنونم."</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card fade-in delay">
+      <h3 style="margin:0">سوالات متداول</h3>
+      <div style="margin-top:10px">
+        <details style="margin-bottom:8px"><summary>هزینه ویزیت چقدر است؟</summary><p class="lead">هزینه‌ها بسته به نوع ویزیت (حضوری/تلفنی/آنلاین) متفاوت است؛ لطفاً برای قیمت دقیق تماس بگیرید.</p></details>
+        <details style="margin-bottom:8px"><summary>آیا نوبت آنلاین وجود دارد؟</summary><p class="lead">بله، از دکمه نوبت آنلاین می‌توانید درخواست ثبت کنید یا از طریق تلفن هماهنگ کنید.</p></details>
+        <details style="margin-bottom:8px"><summary>آیا عمل‌های پیوند کلیه انجام می‌دهند؟</summary><p class="lead">بله؛ ایشان سابقه همکاری در پیوند و جراحی‌های پیچیده کلیوی دارند.</p></details>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        © ۲۰۲۵ دکتر مروت‌الله پیشگاهی — تمامی حقوق محفوظ است.
+      </div>
+      <div style="text-align:left;color:var(--muted)">
+        <small>آدرس: ضلع شمال‌شرقی میدان ونک، خیابان شهید صانعی — تلفن: ۰۲۱‑۸۸۷۸۸۷۶۸</small>
+      </div>
+    </footer>
+  </div>
+
+  <!-- modal -->
+  <div class="modal-bg" id="modalBg">
+    <div class="modal">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>درخواست نوبت / تماس سریع</strong>
+        <button class="close" id="closeModal">✕</button>
+      </div>
+      <p class="lead" style="margin-top:6px">لطفاً اطلاعات زیر را وارد کنید — ما در سریع‌ترین زمان با شما تماس می‌گیریم.</p>
+      <input id="name" placeholder="نام کامل">
+      <input id="phone" placeholder="شماره تماس">
+      <textarea id="note" rows="3" placeholder="شرح مختصر مشکل (اختیاری)"></textarea>
+      <div style="display:flex;gap:8px;margin-top:12px">
+        <button class="btn" id="sendReq">ارسال درخواست</button>
+        <a class="btn" href="tel:+982188788768" style="text-decoration:none;display:inline-grid;place-items:center">تماس مستقیم</a>
+      </div>
+      <p id="sentMsg" style="display:none;margin-top:10px;color:var(--muted)">درخواست شما ثبت شد. تشکر!</p>
+    </div>
+  </div>
+
+  <script>
+    // small interactive behaviors
+    const modalBg = document.getElementById('modalBg');
+    document.getElementById('bookBtn').addEventListener('click', ()=> modalBg.style.display='flex');
+    document.getElementById('contactBtn').addEventListener('click', ()=> modalBg.style.display='flex');
+    document.getElementById('closeModal').addEventListener('click', ()=> modalBg.style.display='none');
+    document.getElementById('sendReq').addEventListener('click', ()=>{
+      // fake submit (replace with real endpoint)
+      document.getElementById('sentMsg').style.display='block';
+      setTimeout(()=> modalBg.style.display='none',1400);
+    });
+
+    // small eye-catching entrance for first-time visitors
+    window.addEventListener('load', ()=>{
+      // tiny pulse on logo
+      const logo = document.querySelector('.logo');
+      logo.animate([{transform:'scale(1)'},{transform:'scale(1.06)'},{transform:'scale(1)'}],{duration:2000,iterations:1});
+      // a gentle spotlight effect on hero
+      const hero = document.querySelector('.hero');
+      hero.animate([{filter:'brightness(0.92)'},{filter:'brightness(1.06)'},{filter:'brightness(1)'}],{duration:2200,iterations:1});
+    });
+  </script>
+</body>
+</html>
